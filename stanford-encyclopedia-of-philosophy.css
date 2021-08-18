@@ -1,0 +1,195 @@
+@-moz-document url-prefix("https://plato.stanford.edu/entries/") {
+  @media print {
+    body {
+      min-height : 100%;
+      margin     : 0;
+      padding    : 0;
+      font-family: "Source Sans Pro", Arial, sans-serif;
+      color      : #1a1a1a;
+      font-weight: 400;
+      font-size  : 15px;
+      line-height: 1.4em;
+    }
+
+    /* Chrome automaticly merge "ff", "fi" to one charctor (ligature), looks better but not searchable
+          https://stackoverflow.com/a/39504776
+          https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings
+        disable this future */
+    body {
+      font-variant-ligatures: none;
+      font-feature-settings : "liga"0;
+    }
+
+    * {
+      line-height: 1.2em;
+    }
+
+    p {
+      text-align: justify;
+      font-size : 1.2em;
+    }
+
+    h1 {
+      font-size    : 3.5em;
+      text-align   : center;
+      margin-top   : 1.2em;
+      margin-bottom: 1em;
+    }
+
+    #pubinfo {
+      text-align: center;
+      margin    : 2em 0;
+    }
+
+    h2:not(:first-child) {
+      margin-top: 2em;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      page-break-after: avoid;
+    }
+
+    table,
+    figure {
+      page-break-inside: avoid;
+    }
+
+    #site-title a {
+      color: black !important;
+    }
+
+    #toc {
+      page-break-before: always;
+      page-break-after : always;
+    }
+
+    #toc>ul {
+      padding-inline-start: 0;
+    }
+
+    #toc hr {
+      display: none;
+    }
+
+    #toc li {
+      font-size      : 1.2rem;
+      list-style-type: none;
+      line-height    : 1.6rem;
+    }
+
+    #toc::before {
+      content    : "Content";
+      font-weight: bold;
+      display    : block;
+      width      : 100%;
+      text-align : center;
+      font-size  : 2.2rem;
+      margin     : 1rem 0 0.6rem 0;
+    }
+
+    #bibliography {
+      font-size        : 0.8rem;
+      page-break-before: always;
+      page-break-after : always;
+    }
+
+    #academic-tools,
+    #other-internet-resources,
+    #related-entries,
+    #article-copyright,
+    #article-banner {
+      display: none;
+    }
+
+    #article-sidebar {
+      display : none !important;
+      position: absolute;
+    }
+
+    #footer {
+      display: none;
+    }
+
+    a,
+    a:active {
+      color: #005981;
+    }
+
+    /* page style */
+    @page {
+      margin-left  : 1.5cm;
+      margin-right : 1.5cm;
+      margin-top   : 1.7cm;
+      margin-bottom: 1.7cm;
+    }
+
+    /* page number */
+    /*
+        @page:right {
+            @bottom-right {
+                content: counter(page);
+            }
+        }
+        @page:left {
+            @bottom-left {
+                content: counter(page);
+            }
+        }
+        
+        @page:left{
+              @bottom-left {
+                content: "Page " counter(page) " of " counter(pages);
+              }
+        }
+        */
+    /* page foot note */
+    /*
+        h1 {
+            string-set: doctitle content();
+        }
+        @page :right {
+            @top-right {
+                content: string(doctitle);
+                margin: 30pt 0 10pt 0;
+                font-size: 8pt;
+            }
+        }
+        */
+  }
+}
+
+@-moz-document regexp("https?://plato\\.stanford\\.edu/entries/.+/.*?") {
+
+  /* For supplimentory documents */
+  @media print {
+
+    #supphead,
+    h2 {
+      text-align: center;
+    }
+
+    #supphead {
+      font-size: 1.5rem;
+    }
+
+    #aueditable>h2:first-child {
+      font-size: 2rem;
+    }
+
+    #aueditable>h2+ul {
+      padding-top   : 1em;
+      padding-bottom: 1em;
+      margin-bottom : 3em;
+      border-top    : 1px solid #8f8f8f;
+      border-bottom : 1px solid #8f8f8f;
+    }
+
+    #aueditable>h2+ul+hr {
+      display: none;
+    }
+  }
+}

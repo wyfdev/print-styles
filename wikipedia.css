@@ -1,0 +1,191 @@
+@-moz-document regexp("https?://(.*)\\.wikipedia\\.org/.*") {
+  @media print {
+    body {
+      min-height : 100%;
+      margin     : 0;
+      padding    : 0;
+      font-family: "Source Sans Pro", Arial, sans-serif;
+      color      : #1a1a1a;
+      font-weight: 400;
+      font-size  : 11pt;
+      line-height: 1.4em !important;
+    }
+
+    /* Chrome automaticly merge "ff", "fi" to one charctor (ligature), looks better but not searchable
+          https://stackoverflow.com/a/39504776
+          https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings
+        disable this future */
+    body {
+      font-variant-ligatures: none;
+      font-feature-settings : "liga"0;
+    }
+
+    * {
+      line-height: 1.2em;
+    }
+
+    p {
+      text-align : justify;
+      font-size  : 1.2em;
+      line-height: 1.4em !important;
+    }
+
+    h1 {
+      font-size    : 3.5em;
+      text-align   : center;
+      margin-top   : 1.2em;
+      margin-bottom: 2em;
+    }
+
+    h1#firstHeading {
+      padding-bottom: 1.2em !important;
+    }
+
+    h1,
+    h2 {
+      page-break-after : avoid !important;
+      page-break-inside: avoid;
+      margin-top       : 1.2em;
+    }
+
+    h2::before {
+      content    : '\A';
+      white-space: pre;
+
+    }
+
+    h3,
+    h4,
+    h5 {
+      page-break-after: avoid !important;
+    }
+
+    table,
+    figure {
+      page-break-inside: avoid;
+    }
+
+    .toccolours,
+    .navbox,
+    .printfooter {
+      display: none;
+    }
+
+    a,
+    a:active {
+      color: #005981 !important;
+    }
+
+    footer#footer {
+      margin-top: 3em !important;
+    }
+
+    /* specific elements */
+    #firstHeading {
+      margin-top: 0;
+      color     : #000;
+    }
+
+    #content {
+      color: #000 !important;
+    }
+
+    #bodyContent h1,
+    #bodyContent h2,
+    #bodyContent h3,
+    #bodyContent h4,
+    #bodyContent h5,
+    #bodyContent h6 {
+      color: #000;
+    }
+
+    #bodyContent a:not(.new):visited {
+      color: #8ab5e5 !important;
+    }
+
+    #coordinates {
+      display: none;
+    }
+
+    /* printing specific */
+    .noprint,
+    #siteSub {
+      display: none !important;
+    }
+
+    #toc {
+      margin           : auto;
+      background-color : white;
+      border           : 0;
+      width            : 100%;
+      page-break-after : always !important;
+      page-break-before: always !important;
+    }
+
+    #mw-toc-heading {
+      margin-bottom: 30px;
+    }
+
+    .reflist,
+    .refbegin {
+      font-size: 0.8em !important;
+    }
+
+    #References {
+      page-break-before: always !important;
+    }
+
+    /* page style */
+    @page {
+      margin-left  : 1.5cm;
+      margin-right : 1.5cm;
+      margin-top   : 1.7cm;
+      margin-bottom: 1.7cm;
+    }
+
+    /* page number */
+    /*
+        @page:right {
+            @bottom-right {
+                content: counter(page);
+            }
+        }
+        @page:left {
+            @bottom-left {
+                content: counter(page);
+            }
+        }
+        
+        @page:left{
+              @bottom-left {
+                content: "Page " counter(page) " of " counter(pages);
+              }
+        }
+        */
+    /* page foot note */
+    /*
+        h1 {
+            string-set: doctitle content();
+        }
+        @page :right {
+            @top-right {
+                content: string(doctitle);
+                margin: 30pt 0 10pt 0;
+                font-size: 8pt;
+            }
+        }
+        */
+  }
+}
+
+@-moz-document domain("zh.wikipedia.org") {
+
+  /* Chinese font */
+  @media print {
+    body {
+      font-family: "Source Sans Pro", Arial, sans-serif, "Printing Style";
+      font-size  : 10pt !important;
+      line-height: 1.4em;
+    }
+  }
+}
