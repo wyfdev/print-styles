@@ -97,17 +97,17 @@
   #References {
     page-break-before: always !important;
   }
-  table.infobox.biography.vcard {
+  table.infobox.vcard {
     width: 100% !important;
     margin-bottom: 40pt;
     border: none !important;
     page-break-before: always !important;
     page-break-after: always !important;
   }
-  table.infobox.biography.vcard .infobox-caption {
+  table.infobox.vcard .infobox-caption {
     line-height: 2em;
   }
-  table.infobox.biography.vcard .infobox-above {
+  table.infobox.vcard .infobox-above {
     display: none;
   }
   /* page style */
