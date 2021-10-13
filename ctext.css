@@ -45,6 +45,14 @@
       display: none !important;
     }
 
+    [id="rhsbar"] {
+      display: none !important;
+    }
+
+    [id="source"]>.etext {
+      display: none !important;
+    }
+
     div.urnlabel {
       display: none !important;
     }
