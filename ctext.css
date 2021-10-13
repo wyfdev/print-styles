@@ -1,59 +1,54 @@
 @-moz-document url-prefix("https://ctext.org/") {
-  @media print {
-    tr {
-      page-break-inside: avoid;
-    }
-
-    td[valign="top"] {
-      width: 1em !important;
-    }
-
-    td[valign="top"]:nth-child(1) a {
-      font-size   : 0.5em;
-      color       : #555 !important;
-      display     : inline-block !important;
-      margin-top  : 0pt;
-      margin-right: 3pt;
-    }
-
-    td[valign="top"]:nth-child(1) div {
-      display: none !important;
-    }
-
-    td[valign="top"]:nth-child(2) {
-      display: none !important;
-    }
-
-    h2 {
-      font-size    : 20pt;
-      margin-bottom: 1em;
-    }
-
-    h2>div {
-      display: none !important;
-    }
-
-    [id="titleline"] {
-      display: none !important;
-    }
-
-    [id="content3"]>table:first-child>tbody>tr>td[align="right"] {
-      display: none !important;
-    }
-
-    [id="footer"] {
-      display: none !important;
-    }
-
-    div.urnlabel {
-      display: none !important;
-    }
-
-    @page {
-      margin-left  : 1.0cm;
-      margin-right : 1.5cm;
-      margin-top   : 1.7cm;
-      margin-bottom: 1.7cm;
-    }
-  }
+@media print {
+	tr {
+		page-break-inside: avoid;
+	}
+	td[valign="top"] {
+		width: 1em !important;
+	}
+	td[valign="top"]:nth-child(1) a {
+		font-size: 0.5em;
+		color: #555 !important;
+		display: inline-block !important;
+		margin-top: 0pt;
+		margin-right: 3pt;
+	}
+	td[valign="top"]:nth-child(1) div {
+		display: none !important;
+	}
+	td[valign="top"]:nth-child(2) {
+		display: none !important;
+	}
+	h2 {
+		font-size: 20pt;
+		margin-bottom: 1em;
+	}
+	h2 > div {
+		display: none !important;
+	}
+	[id="titleline"] {
+		display: none !important;
+	}
+	[id="content3"] > table:first-child > tbody > tr > td[align="right"] {
+		display: none !important;
+	}
+	[id="footer"] {
+		display: none !important;
+	}
+	[id="rhsbar"] {
+		display: none !important;
+	}
+	[id="source"] > .etext {
+		display: none !important;
+	}
+	div.urnlabel {
+		display: none !important;
+	}
+	@page {
+		margin-left : 1.0cm;
+		margin-right : 1.5cm;
+		margin-top : 1.7cm;
+		margin-bottom: 1.7cm;
+	}
+}
 }
