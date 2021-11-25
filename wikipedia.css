@@ -95,6 +95,7 @@
     font-size: 0.8em !important;
   }
   #References {
+    display: block;
     page-break-before: always !important;
   }
   table.infobox.vcard {
