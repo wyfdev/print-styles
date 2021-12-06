@@ -104,6 +104,7 @@
     border: none !important;
     page-break-before: always !important;
     page-break-after: always !important;
+    page-break-inside: auto;
   }
   table.infobox.vcard .infobox-caption {
     line-height: 2em;
