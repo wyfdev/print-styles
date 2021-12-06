@@ -97,6 +97,10 @@
       page-break-after : always;
     }
 
+    a[href="#Rel"], a[href="#Oth"], a[href="#Aca"] {
+      display: none !important;
+    }
+
     #academic-tools,
     #other-internet-resources,
     #related-entries,
