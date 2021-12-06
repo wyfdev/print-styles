@@ -56,6 +56,10 @@
   a, a:active {
     color: #005981 !important;
   }
+  sup {
+    font-size: 0.5em !important;
+    opacity: 0.8;
+  }
   footer#footer {
     margin-top: 3em !important;
   }
